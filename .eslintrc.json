@@ -3,6 +3,7 @@
         "browser": true,
         "es2021": true
     },
+    "plugins": ["solid"],
     "extends": "eslint:recommended",
     "overrides": [
     ],
@@ -14,5 +15,6 @@
     "sourceType": "module"
     },
     "rules": {
+        "no-unused-vars": "warn"
     }
 }
