@@ -1,12 +1,11 @@
 import * as THREE from "three";
-import { PerspectiveCamera } from "three";
 
 const App = () => {
   // new scene
   const scene = new THREE.Scene();
 
   // new camera (field of view, camera aspect ratio, camera frustum near plane, camera frustum far plane)
-  const camera = new PerspectiveCamera(90, 4 / 3, 0.1, 10000);
+  const camera = new THREE.PerspectiveCamera(90, 4 / 3, 0.1, 10000);
 
   // new WebGlRenderer
   const renderer = new THREE.WebGLRenderer();
@@ -26,6 +25,7 @@ const App = () => {
   const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
   scene.add(cube);
 
+  // render
   renderer.render(scene, camera);
 
   // domElement renderer
